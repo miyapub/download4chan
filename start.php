@@ -2,8 +2,8 @@
 require 'simple_html_dom.php';
 require 'config.php';
 
-$base_url="http://boards.4chan.org/g/";
-$save_to="g";
+$base_url="http://boards.4chan.org/trv/";
+$save_to="Travel";
 
 $urls=array();
 $images=array();
