@@ -1,4 +1,5 @@
 <?
+require 'config.php';
 function download($url,$file){
     if (!preg_match('/^http:\/\//', $url)) {
         $url = "http://" . $url;
@@ -14,9 +15,9 @@ function download($url,$file){
 }
 
 $url=$_GET['url'];
-$dir=$_GET['dir'];
-$dir=str_replace("..","",$dir);
+$saveto=$_GET['saveto'];
+$saveto=str_replace("..","",$saveto);
 $array = explode("/",$url);
-$file_name="images/".$dir."/".$array[count($array)-1];
+$file_name=$download_dir."/".$saveto."/".$array[count($array)-1];
 download($url,$file_name);
 ?>
