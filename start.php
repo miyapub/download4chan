@@ -5,7 +5,6 @@ require 'config.php';
 $base_url="http://boards.4chan.org/g/";
 $save_to="g";
 
-
 $urls=array();
 $images=array();
 
