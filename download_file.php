@@ -19,5 +19,12 @@ $saveto=$_GET['saveto'];
 $saveto=str_replace("..","",$saveto);
 $array = explode("/",$url);
 $file_name=$download_dir."/".$saveto."/".$array[count($array)-1];
+
+if(file_exists($download_dir."/".$saveto)){
+
+}else{
+    mkdir ($download_dir."/".$saveto);
+}
+
 download($url,$file_name);
 ?>
